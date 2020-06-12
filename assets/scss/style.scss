@@ -1,0 +1,46 @@
+@import "lem_mixins/lem_mixins";
+@import "/assets/fonts/fonts.css";
+@import "_variable.scss";
+@import "_typography.scss";
+@import "_header.scss";
+@import "_sidebar-panel.scss";
+
+//content
+@import "layouts/_white-section.scss";
+@import "layouts/_info-section.scss";
+@import "layouts/_table-section.scss";
+
+.wrap {
+  background-color: $body_color;
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.d-flex {
+  position: relative;
+  display: flex;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  max-height: 500px;
+  -webkit-overflow-scrolling: touch;
+
+  .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: rgba(0,0,0,0);
+
+  }
+
+  .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #a2a2a2;
+  }
+
+  #mCSB_1_dragger_vertical {
+    max-height: 100px !important;
+  }
+}
