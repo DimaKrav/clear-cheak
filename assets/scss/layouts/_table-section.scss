@@ -2,7 +2,6 @@
   .filters-block {
     display: flex;
     align-items: flex-end;
-    padding-bottom: 20px;
 
     .info-cards {
       padding-bottom: 0;
@@ -34,6 +33,7 @@
     }
 
     .filter-item {
+      margin-bottom: 20px;
     }
   }
 }
