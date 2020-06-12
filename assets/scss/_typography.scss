@@ -1,28 +1,27 @@
 body {
   font-family: $body_font;
   overflow-x: hidden;
+  color: #424242;
 }
 
 html {
   overflow-x: hidden;
 }
 
-.medium-title-type-2 {
-  line-height: 1.2;
-  font-size: 45px;
-  font-family: $body_font;
-  @include adaptive-font-size(1367, 400, 45, 32, true);
+.dark-theme {
+  color: #535354;
+}
 
-  &.dark-theme {
-    color: black;
-  }
+.light-theme {
+  color: white;
+}
 
-  &.light-theme {
-    color: white;
-  }
+.custom-select {
+
 }
 
 .content {
+  width: 100%;
   color: #545454;
   font-size: 16px;
   font-family: $body_font;
@@ -294,13 +293,12 @@ html {
           padding: 6px 14px;
           font-size: 14px;
 
-
           &[data-label="Name"] {
             text-transform: uppercase;
             font-size: 10px;
             font-weight: 800;
           }
-          &[data-label="Location"], &[data-label="Cell"],&[data-label="Email"]{
+          &[data-label="Location"], &[data-label="Cell"], &[data-label="Email"] {
             font-size: 10px;
             font-weight: 800;
             color: #a2a2a2;

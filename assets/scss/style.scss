@@ -6,6 +6,7 @@
 @import "_sidebar-panel.scss";
 
 //content
+@import "layouts/_general_blocks.scss";
 @import "layouts/_white-section.scss";
 @import "layouts/_info-section.scss";
 @import "layouts/_table-section.scss";
@@ -21,7 +22,7 @@
 
 .d-flex {
   position: relative;
-  display: flex;
+  display: flex; 
 }
 
 .table-responsive {

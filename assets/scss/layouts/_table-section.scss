@@ -1,15 +1,43 @@
 .table-section {
+  padding-top: 100px;
+
+  .page-title {
+    font-size: 61px;
+    color: #1c97c4;
+    @include adaptive-font-size(1367, 400, 61, 40, true);
+    margin-top: 0;
+  }
   .filters-block {
     display: flex;
-    align-items: flex-end;
+
+
+    .left-side {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .filters {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      @media screen and (max-width: $screen_md) {
+        flex-wrap: wrap;
+      }
+
+        .filter-item {
+        margin-bottom: 20px;
+      }
+    }
 
     .info-cards {
+      position: relative;
       padding-bottom: 0;
-      margin-bottom: -4px;
+      margin-bottom: 16px;
       width: 228px;
 
       .info-card {
         margin-bottom: 0;
+
         .info-card-inner:before {
           background-color: $blue-dark;
           opacity: 1;
@@ -23,7 +51,7 @@
       width: 100%;
       margin-right: 17px;
       border: 0;
-      padding: 0;
+      padding: 0 20px;
     }
 
     .add-user-btn {
@@ -32,8 +60,17 @@
       white-space: nowrap;
     }
 
-    .filter-item {
-      margin-bottom: 20px;
+    @media screen and (max-width: $screen_md){
+      flex-wrap: wrap;
+
+      .table-search,.select-location {
+        margin-right: 0;
+      }
+
+      .info-cards {
+        width: 100%;
+      }
     }
+
   }
 }
