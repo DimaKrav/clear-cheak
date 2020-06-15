@@ -30,6 +30,9 @@
   position: relative;
   display: flex;
 }
+.f-wrap {
+  flex-wrap: wrap;
+}
 
 .table-responsive {
   display: block;
