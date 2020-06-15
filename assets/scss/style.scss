@@ -11,7 +11,13 @@
 @import "layouts/_info-section.scss";
 @import "layouts/_table-section.scss";
 
+//login
+@import "layouts/_login-section.scss";
+
 .wrap {
+  position: relative;
+  height: auto;
+  min-height: calc(100vh - 68px);
   background-color: $body_color;
 }
 

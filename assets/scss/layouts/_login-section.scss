@@ -1,0 +1,37 @@
+.login-section {
+  display: flex;
+  height: calc(100vh - 68px);
+  align-items: center;
+
+  .login-form {
+    background: $blue-dark;
+    padding: 30px 45px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      margin-right: 0;
+
+
+      &[type=text],
+      &[type=password] {
+        width: 100%;
+      }
+    };
+
+    .additional-wrap {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+}

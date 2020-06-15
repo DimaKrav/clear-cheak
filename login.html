@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="l-side">
+        <div class="site-logo"><img src="assets/img/logo.png" alt="Logo"></div>
+    </div>
+    <div class="r-side">
+        <div class="login-wrap">
+            <a href="#sign-out">Sign Out</a><span> | Welcome Back,</span> <span class="avatar-name">Julie!</span>
+            <a href="#avatar"><img src="assets/img/avatar-cut.jpg" alt="Avatar"></a>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+    <div class="container-fluid">
+        <div class="row d-flex">
+
+            <div id="sidebar" class="col-md-2 sidebar-panel">
+
+                <ul id="menu" class="menu">
+                    <li class="item active"><a class="item-link current" href="#visitors">VISITORS</a></li>
+                </ul>
+
+                <ul class="additional-menu">
+                    <li><a class="additional-link" href="#sign-out">Sign out</a></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-10 content">
+
+                <section class="login-section">
+                    <form class="login-form" action="">
+                        <h1 class="light-theme">Login</h1>
+                        <div class="field-group">
+                            <input type="text" placeholder="USERNAME">
+                        </div>
+                        <div class="field-group">
+                            <input type="password" placeholder="PASSWORD">
+                        </div>
+
+                        <div class="additional-wrap">
+                            <div class="field-group">
+                                <label class="light-theme container-checkbox">
+                                    <input type="checkbox" checked="checked">
+                                    Remember me
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                            <div class="field-group">
+                                <a class="light-theme" href="#recover-password">Forgot your password ?</a>
+                            </div>
+
+                        </div>
+
+                        <div class="sbmt-wrap">
+                            <input class="btn btn-inline btn-white" type="submit" value="Login">
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</footer>
+</body>
+</html>

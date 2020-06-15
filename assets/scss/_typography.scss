@@ -36,21 +36,31 @@ html {
       color: $blue-light;
     }
 
-    &.btn {
-      display: block;
-      font-size: 12px;
-      letter-spacing: 2px;
-      padding: 9px 20px;
-      margin-bottom: 20px;
+    &.light-theme {
+      color: white;
+    }
 
-      &.btn-inline {
-        display: inline-block;
-      }
+  }
 
-      &.btn-blue {
-        color: #ffffff;
-        background-color: $blue-dark;
-      }
+  .btn {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 9px 20px;
+    margin-bottom: 20px;
+
+    &.btn-inline {
+      display: inline-block;
+    }
+
+    &.btn-blue {
+      color: #ffffff;
+      background-color: $blue-dark;
+    }
+
+    &.btn-white {
+      color: $blue-dark;
+      background-color: #ffffff;
     }
   }
 
