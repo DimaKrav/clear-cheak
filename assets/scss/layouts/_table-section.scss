@@ -24,9 +24,6 @@
         flex-wrap: wrap;
       }
 
-        .filter-item {
-        margin-bottom: 20px;
-      }
     }
 
     .info-cards {
@@ -50,11 +47,10 @@
       display: flex;
       width: 100%;
       margin-right: 17px;
-      border: 0;
-      padding: 0 20px;
     }
 
     .add-user-btn {
+      margin-bottom: 20px;
       margin-right: 17px;
       width: 130px !important;
       white-space: nowrap;

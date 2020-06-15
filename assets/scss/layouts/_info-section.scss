@@ -1,7 +1,6 @@
 .info-section {
+  display: flex;
   background: #093c4f;
   background: -webkit-radial-gradient(top left, #1c97c4, #093c4f);
-  padding-top: 55px;
-  padding-bottom: 20px;
-  display: flex;
+  padding: 55px 5px 20px;
 }

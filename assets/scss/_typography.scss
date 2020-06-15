@@ -16,10 +16,6 @@ html {
   color: white;
 }
 
-.custom-select {
-
-}
-
 .content {
   width: 100%;
   color: #545454;
@@ -45,6 +41,11 @@ html {
       font-size: 12px;
       letter-spacing: 2px;
       padding: 9px 20px;
+      margin-bottom: 20px;
+
+      &.btn-inline {
+        display: inline-block;
+      }
 
       &.btn-blue {
         color: #ffffff;
