@@ -18,6 +18,7 @@ html {
 
 .content {
   width: 100%;
+  min-height: calc(100vh - 68px);
   color: #545454;
   font-size: 16px;
   font-family: $body_font;
