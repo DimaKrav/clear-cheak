@@ -6,8 +6,8 @@
     <title>PlainsCapitalBank - ClearCheck Dashboard</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css" />
-    <link rel="stylesheet" href="assets/css/calendar.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="assets/css/calendar.css"/>
 </head>
 <body>
 <header class="site-header">
@@ -20,7 +20,7 @@
             <a href="#avatar"><img src="assets/img/avatar-cut.jpg" alt="Avatar"></a>
         </div>
         <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox" />
+            <input id="menu__toggle" type="checkbox"/>
             <label class="menu__btn" for="menu__toggle">
                 <span></span>
             </label>
@@ -46,267 +46,289 @@
                 </ul>
 
                 <ul class="additional-menu">
-                    <li><a class="additional-link" href="#sign-out">Sign out</a></li></li>
+                    <li><a class="additional-link" href="#sign-out">Sign out</a></li>
+                    </li>
                 </ul>
             </div>
-            <div class="col-md-10 content">
 
-                <section class="white-section">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h1><span class="light">ClearCheck</span> Dashboard</h1>
-                            <p>Have a question? Contact our team for the answers.</p>
+
+            <div class="wrap-inner">
+                <div id="message"></div>
+
+                <div class="col-md-10 content">
+
+                    <section class="white-section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1><span class="light">ClearCheck</span> Dashboard</h1>
+                                <p>Have a question? Contact our team for the answers.</p>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <section class="info-section">
+                    <section class="info-section">
+                        <div class="content-container">
+                            <div class="info-cards">
+                                <div class="info-card">
+                                    <div class="info-card-inner">
+                                        <div id="time-picker-module"></div>
+                                    </div>
+                                </div>
+                                <div class="info-card selected-tile">
+                                    <div class="info-card-inner">
+                                        <h2 class="card-value">91%</h2>
+                                        <p class="card-description">Response Rate</p>
+                                        <a class="card-link" href="#">VIEW</a>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-card-inner">
+                                        <h2 class="card-value">24</h2>
+                                        <p class="card-description">Awaiting Replies</p>
+                                        <a class="card-link" href="#">VIEW</a>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-card-inner">
+                                        <h2 class="card-value">3</h2>
+                                        <p class="card-description">Warnings</p>
+                                        <a class="card-link" href="#">VIEW</a>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-card-inner">
+                                        <h2 class="card-value">67</h2>
+                                        <p class="card-description">Guests Today</p>
+                                        <a class="card-link" href="#">VIEW</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a class="add-user-btn btn btn-inline btn-blue" href="/employees/new">+ ADD EMPLOYEE</a>
+                                <form class="d-flex f-wrap" enctype="multipart/form-data" action="/employees/import"
+                                      accept-charset="UTF-8" method="post"><input name="utf8" type="hidden"
+                                                                                  value="✓"><input type="hidden"
+                                                                                                   name="authenticity_token"
+                                                                                                   value="hvcWriSg39SwKuIUBZzGj90GdhHVTdqU5meqj/13zQcYZ96lYamgCJPDCrKpTzh8yxYTIW+JJOao1FK7+KfUog==">
+                                    <input type="file" name="file" id="file" class="inputfile inputfile-2"
+                                           data-multiple-caption="{count} files selected" multiple="" required>
+                                    <label class="btn btn-blue btn-inline btn-mr" for="file">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17"
+                                             viewBox="0 0 20 17">
+                                            <path
+                                                d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+                                        </svg>
+                                        <span>Choose a file…</span></label>
+                                    <input type="submit" name="commit" value="Import CSV"
+                                           class="filter-item add-user-btn btn btn-blue" data-disable-with="Import CSV">
+                                </form>
+                            </div>
+
+                            <div class="info-table-search">
+                                <input class="filter-item table-search" type="search" placeholder="Name">
+
+                                <select class="custom-select filter-item select-location" name="country">
+                                    <option value disabled selected hidden>Location</option>
+                                    <option>Россия</option>
+                                    <option>США</option>
+                                    <option>Турция</option>
+                                    <option>Китай</option>
+                                    <option>Россия</option>
+                                    <option>США</option>
+                                    <option>Турция</option>
+                                    <option>Китай</option>
+                                    <option>Россия</option>
+                                    <option>США</option>
+                                    <option>Турция</option>
+                                    <option>Китай</option>
+                                    <option>Россия</option>
+                                    <option>США</option>
+                                    <option>Турция</option>
+                                    <option>Китай</option>
+                                    <option>Россия</option>
+                                    <option>США</option>
+                                    <option>Турция</option>
+                                    <option>Китай</option>
+                                </select>
+
+                                <a href="#" class="btn btn-inline btn-blue">Search</a>
+                            </div>
+
+                            <div class="info-table">
+                                <div class="table-responsive">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>NAME</th>
+                                            <th>LOCATION</th>
+                                            <th>CELL</th>
+                                            <th>EMAIL</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-red.png" alt="check red"></td>
+                                            <td data-label="Name">EMILY BLUNT</td>
+                                            <td data-label="Location">Dallas, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">emilyblunt@gmail.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-blue.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-red.png" alt="check red"></td>
+                                            <td data-label="Name">EMILY BLUNT</td>
+                                            <td data-label="Location">Dallas, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">emilyblunt@gmail.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-blue.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-red.png" alt="check red"></td>
+                                            <td data-label="Name">EMILY BLUNT</td>
+                                            <td data-label="Location">Dallas, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">emilyblunt@gmail.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-blue.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/check-green.png" alt="check green"></td>
+                                            <td data-label="Name">john krasinski</td>
+                                            <td data-label="Location">Austin, TX</td>
+                                            <td data-label="Cell">-----</td>
+                                            <td data-label="Email">info@krasinski.com</td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+                <div class="info-footer dark-theme">
                     <div class="content-container">
-                        <div class="info-cards">
-                            <div class="info-card">
-                                <div class="info-card-inner">
-                                    <div id="time-picker-module"></div>
-                                </div>
-                            </div>
-                            <div class="info-card selected-tile">
-                                <div class="info-card-inner">
-                                    <h2 class="card-value">91%</h2>
-                                    <p class="card-description">Response Rate</p>
-                                    <a class="card-link" href="#">VIEW</a>
-                                </div>
-                            </div>
-                            <div class="info-card">
-                                <div class="info-card-inner">
-                                    <h2 class="card-value">24</h2>
-                                    <p class="card-description">Awaiting Replies</p>
-                                    <a class="card-link" href="#">VIEW</a>
-                                </div>
-                            </div>
-                            <div class="info-card">
-                                <div class="info-card-inner">
-                                    <h2 class="card-value">3</h2>
-                                    <p class="card-description">Warnings</p>
-                                    <a class="card-link" href="#">VIEW</a>
-                                </div>
-                            </div>
-                            <div class="info-card">
-                                <div class="info-card-inner">
-                                    <h2 class="card-value">67</h2>
-                                    <p class="card-description">Guests Today</p>
-                                    <a class="card-link" href="#">VIEW</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <a class="add-user-btn btn btn-inline btn-blue" href="/employees/new">+ ADD EMPLOYEE</a>
-                            <form class="d-flex f-wrap" enctype="multipart/form-data" action="/employees/import" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="hvcWriSg39SwKuIUBZzGj90GdhHVTdqU5meqj/13zQcYZ96lYamgCJPDCrKpTzh8yxYTIW+JJOao1FK7+KfUog==">
-                                <input type="file" name="file" id="file" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple="" required>
-                                <label class="btn btn-blue btn-inline btn-mr" for="file"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg> <span>Choose a file…</span></label>
-                                <input type="submit" name="commit" value="Import CSV" class="filter-item add-user-btn btn btn-blue" data-disable-with="Import CSV">
-                            </form>      </div>
-
-                        <div class="info-table-search">
-                            <input class="filter-item table-search" type="search" placeholder="Name">
-
-                            <select class="custom-select filter-item select-location" name="country">
-                                <option value disabled selected hidden>Location</option>
-                                <option>Россия</option>
-                                <option>США</option>
-                                <option>Турция</option>
-                                <option>Китай</option>
-                                <option>Россия</option>
-                                <option>США</option>
-                                <option>Турция</option>
-                                <option>Китай</option>
-                                <option>Россия</option>
-                                <option>США</option>
-                                <option>Турция</option>
-                                <option>Китай</option>
-                                <option>Россия</option>
-                                <option>США</option>
-                                <option>Турция</option>
-                                <option>Китай</option>
-                                <option>Россия</option>
-                                <option>США</option>
-                                <option>Турция</option>
-                                <option>Китай</option>
-                            </select>
-
-                            <a href="#" class="btn btn-inline btn-blue">Search</a>
-                        </div>
-
-                        <div class="info-table">
-                            <div class="table-responsive">
-                                <table>
-                                    <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>NAME</th>
-                                        <th>LOCATION</th>
-                                        <th>CELL</th>
-                                        <th>EMAIL</th>
-                                    </tr>
-                                    </thead>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-red.png" alt="check red"></td>
-                                        <td data-label="Name">EMILY BLUNT</td>
-                                        <td data-label="Location">Dallas, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">emilyblunt@gmail.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-blue.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-red.png" alt="check red"></td>
-                                        <td data-label="Name">EMILY BLUNT</td>
-                                        <td data-label="Location">Dallas, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">emilyblunt@gmail.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-blue.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-red.png" alt="check red"></td>
-                                        <td data-label="Name">EMILY BLUNT</td>
-                                        <td data-label="Location">Dallas, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">emilyblunt@gmail.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-blue.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img src="assets/img/check-green.png" alt="check green"></td>
-                                        <td data-label="Name">john krasinski</td>
-                                        <td data-label="Location">Austin, TX</td>
-                                        <td data-label="Cell">-----</td>
-                                        <td data-label="Email">info@krasinski.com</td>
-                                    </tr>
-
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="info-footer">
-                            <div class="information-block">
-                                <span class="copyright">Copyright 2020</span>
-                                <a href="#">Privacy</a>
-                                <a href="#">Support</a>
-                            </div>
-
+                        <div class="information-block">
+                            <span class="copyright">Copyright 2020</span>
+                            <a href="#">Privacy</a>
+                            <a href="#">Support</a>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
     </div>
