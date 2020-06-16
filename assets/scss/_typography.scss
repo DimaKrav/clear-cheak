@@ -68,6 +68,10 @@ html {
       margin-right: 17px;
     }
 
+    &.btn-wide {
+      padding: 9px 40px;
+    }
+
   }
 
   strong {
@@ -195,45 +199,6 @@ html {
 
     + h6 {
       margin-top: 20px;
-    }
-
-    &.upper-navigation {
-      padding: 30px 0 0 40px;
-      list-style: none;
-
-      li {
-        padding: 10px 0 10px 40px;
-        margin-bottom: 4px;
-        display: inline-block;
-        font-family: $body_font;
-        font-size: 16px;
-        color: #575757;
-        transition: .5s color;
-        position: relative;
-        line-height: 1.2;
-        list-style: none;
-
-        a {
-          color: black;
-
-          &:hover {
-            color: $blue-light;
-          }
-        }
-
-        &:before {
-          content: "";
-          position: absolute;
-          width: 8px;
-          height: 8px;
-          border-radius: 100%;
-          border: 1px solid $blue-light;
-          background: $blue-light;
-          left: 11px;
-          top: 15px;
-          transition: .5s border;
-        }
-      }
     }
   }
 

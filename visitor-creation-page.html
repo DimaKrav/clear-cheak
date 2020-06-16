@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whittier Trust Guest Portal</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="assets/css/calendar.css"/>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="l-side">
+        <div class="site-logo"><img src="assets/img/logo.png" alt="Logo"></div>
+    </div>
+    <div class="r-side">
+        <div class="login-wrap">
+            <a href="#sign-out">Sign Out</a><span> | Welcome Back,</span> <span class="avatar-name">Julie!</span>
+            <a href="#avatar"><img src="assets/img/avatar-cut.jpg" alt="Avatar"></a>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+    <div class="container-fluid">
+        <div class="row d-flex">
+
+            <div id="sidebar" class="col-md-2 sidebar-panel">
+
+                <ul id="menu" class="menu">
+                    <li class="item active"><a class="item-link current" href="#visitors">VISITORS</a></li>
+                </ul>
+
+                <ul class="additional-menu">
+                    <li><a class="additional-link" href="#sign-out">Sign out</a></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="wrap-inner">
+                <div id="message"></div>
+
+                <div class="col-md-10 content">
+
+                    <section class="content-container white-section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1 class="page-title">Whittier Trust<span class="light dark-theme"> Guest Portal</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-container">
+                        <form class="user-info">
+                            <div class="field-group">
+                                <input type="text" id="edit-first-name" placeholder="First Name">
+                                <input type="text" id="edit-last-name" placeholder="Last Name">
+                                <input type="text" id="edit-email" placeholder="E-mail">
+                                <input type="text" id="edit-phone" placeholder="Phone number">
+                            </div>
+                            <div class="field-group half">
+                                <select name="Location" id="edit-location">
+                                    <option value disabled selected hidden>Location</option>
+                                    <option>Россия</option>
+                                    <option>США</option>
+                                    <option>Турция</option>
+                                    <option>Китай</option>
+                                </select>
+
+                                <select id="edit-survey" name="Survey">
+                                    <option value disabled selected hidden>Survey</option>
+                                    <option>Some item</option>
+                                </select>
+                            </div>
+
+                            <div class="field-group">
+                                <select name="Location" id="edit-year" class="w-auto">
+                                    <option value disabled selected hidden>Year</option>
+                                </select>
+
+                                <select id="edit-month" name="Survey" class="w-auto">
+                                    <option value disabled selected hidden>Month</option>
+
+                                </select>
+
+                                <select id="edit-day" name="Survey" class="w-auto">
+                                    <option value disabled selected hidden>Day</option>
+
+                                </select>
+                            </div>
+
+                            <input class="btn btn-blue btn-wide" type="submit" value="SAVE">
+
+
+                        </form>
+
+                    </section>
+
+
+                    <div class="info-footer dark-theme">
+                        <div class="content-container">
+                            <div class="information-block">
+                                <span class="copyright">Copyright 2020</span>
+                                <a href="#">Privacy</a>
+                                <a href="#">Support</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/vendor/calendar.js"></script>
+</footer>
+</body>
+</html>
