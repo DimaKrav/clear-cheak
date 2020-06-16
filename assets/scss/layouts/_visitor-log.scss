@@ -1,0 +1,38 @@
+.visitor-log {
+  padding-top: 50px;
+
+  .visitor-info {
+    padding: 70px 0;
+    .field-group {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      .field {
+        color: #747474;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 800;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .tible-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #747474;
+  }
+  .visitor-table {
+    margin-top: 20px;
+    padding: 45px 15px 20px;
+    background: #ffffff;
+    min-height: 270px;
+
+    table tr td {
+      border: 0;
+    }
+  }
+}

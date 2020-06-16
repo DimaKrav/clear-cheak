@@ -205,10 +205,19 @@ input, textarea, select {
   margin-bottom: 20px;
   letter-spacing: 2px;
 
+  &[type=text],&[type=search],&[type=email] {
+    box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
+  }
+
   @media screen  and (max-width: $screen_xs){
     width: 100%;
     margin-right: 0;
   }
+}
+
+select {
+  background: #ffffff;
+  box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
 }
 
 .container-checkbox {

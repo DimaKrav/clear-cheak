@@ -10,6 +10,7 @@
 @import "layouts/_white-section.scss";
 @import "layouts/_info-section.scss";
 @import "layouts/_table-section.scss";
+@import "layouts/_visitor-log.scss";
 
 //login
 @import "layouts/_login-section.scss";
@@ -41,6 +42,7 @@
   overflow-x: auto;
   max-height: 500px;
   -webkit-overflow-scrolling: touch;
+  border: 0;
 
   .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
     background-color: rgba(0,0,0,0);
@@ -54,4 +56,4 @@
   #mCSB_1_dragger_vertical {
     max-height: 100px !important;
   }
-} 
+}
