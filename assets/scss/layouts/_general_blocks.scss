@@ -1,3 +1,108 @@
+input, textarea, select {
+  font-size: 12.5px;
+  border: 0;
+  padding: 0 20px;
+  height: 40px;
+  margin-right: 17px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+
+  box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
+
+  @media screen  and (max-width: $screen_xs){
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+input {
+  &[type=submit],&[type=button]{
+    box-shadow: none;
+  }
+}
+
+select {
+  background: #ffffff;
+  box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
+}
+
+textarea {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100px;
+}
+
+input[type=file] {
+  &:focus {
+    outline: 0;
+  }
+}
+
+input[type=search] {
+  min-width: 180px;
+}
+
+.container-checkbox {
+  display: flex;
+  align-items: start;
+  position: relative;
+  padding-left: 35px;
+  padding-right: 20px;
+  line-height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: #ffffff;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: #ffffff;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 7px;
+    height: 12px;
+    border: solid $blue-dark;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
 .info-cards {
   display: flex;
   flex-wrap: wrap;
@@ -196,110 +301,6 @@
   }
 }
 
-input, textarea, select {
-  font-size: 12.5px;
-  border: 0;
-  padding: 0 20px;
-  height: 40px;
-  margin-right: 17px;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-
-  box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
-
-  @media screen  and (max-width: $screen_xs){
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
-input {
-  &[type=submit],&[type=button]{
-    box-shadow: none;
-  }
-}
-
-select {
-  background: #ffffff;
-  box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
-}
-
-textarea {
-  width: 100%;
-  min-height: 100px;
-}
-
-.container-checkbox {
-  display: flex;
-  align-items: start;
-  position: relative;
-  padding-left: 35px;
-  padding-right: 20px;
-  line-height: 30px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  .checkmark {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #ffffff;
-  }
-
-  &:hover input ~ .checkmark {
-    background-color: #ffffff;
-  }
-
-  input:checked ~ .checkmark {
-    background-color: #ffffff;
-  }
-
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  input:checked ~ .checkmark:after {
-    display: block;
-  }
-
-  .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 7px;
-    height: 12px;
-    border: solid $blue-dark;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-}
-
-input[type=file] {
-  &:focus {
-    outline: 0;
-  }
-}
-
-input[type=search] {
-  min-width: 180px;
-}
-
 .js .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -339,9 +340,7 @@ input[type=search] {
   vertical-align: middle;
   fill: currentColor;
   margin-top: -0.25em;
-  /* 4px */
   margin-right: 0.25em;
-  /* 4px */
 }
 
 .inputfile-2:focus + label,
