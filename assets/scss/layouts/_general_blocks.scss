@@ -205,13 +205,17 @@ input, textarea, select {
   margin-bottom: 20px;
   letter-spacing: 2px;
 
-  &[type=text],&[type=search],&[type=email] {
-    box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
-  }
+  box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
 
   @media screen  and (max-width: $screen_xs){
     width: 100%;
     margin-right: 0;
+  }
+}
+
+input {
+  &[type=submit],&[type=button]{
+    box-shadow: none;
   }
 }
 
@@ -220,10 +224,18 @@ select {
   box-shadow: 1px 1px 0 #d8d8d8 inset, -1px -1px 0 #d8d8d8 inset;
 }
 
+textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
 .container-checkbox {
-  display: block;
+  display: flex;
+  align-items: start;
   position: relative;
   padding-left: 35px;
+  padding-right: 20px;
+  line-height: 30px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -244,7 +256,7 @@ select {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: #ffffff;
   }
 
   &:hover input ~ .checkmark {
@@ -357,12 +369,15 @@ input[type=search] {
   flex-wrap: wrap;
   padding-bottom: 20px;
 
-  .field {
+  .field, .field-div {
     color: #747474;
     font-size: 12px;
     letter-spacing: 2px;
     font-weight: 800;
-    padding-right: 20px;
+    padding-right: 17px;
+    &.half {
+      width: 50%;
+    }
   }
 
   input,select {
@@ -381,13 +396,17 @@ input[type=search] {
   }
 
   .w-auto {
-    width: auto;
+    width: auto !important;
   }
 
 
   @media screen and (max-width: $screen_xs){
-    input, select, &.half, .w-auto {
+    input, select, &.half, .w-auto, .field-div.half, .field.half {
       width: 100%;
+    }
+
+    .field-div {
+      padding: 0;
     }
   }
 }

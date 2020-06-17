@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whittier Trust Guest Portal</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="assets/css/calendar.css"/>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="l-side">
+        <div class="site-logo"><img src="assets/img/logo.png" alt="Logo"></div>
+    </div>
+    <div class="r-side">
+        <div class="login-wrap">
+            <a href="#sign-out">Sign Out</a><span> | Welcome Back,</span> <span class="avatar-name">Julie!</span>
+            <a href="#avatar"><img src="assets/img/avatar-cut.jpg" alt="Avatar"></a>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+    <div class="container-fluid">
+        <div class="row d-flex">
+
+            <div id="sidebar" class="col-md-2 sidebar-panel">
+
+                <ul id="menu" class="menu">
+                    <li class="item active"><a class="item-link current" href="#visitors">VISITORS</a></li>
+                </ul>
+
+                <ul class="additional-menu">
+                    <li><a class="additional-link" href="#sign-out">Sign out</a></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="wrap-inner">
+                <div id="message"></div>
+
+                <div class="col-md-10 content">
+
+                    <section class="content-container white-section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1 class="page-title">Whittier Trust<span class="light dark-theme"> Guest Portal</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-container suvery-section">
+
+                        <input class="btn btn-blue" type="button" value="+ ADD USER">
+
+                        <form class="survay-form">
+                            <div class="field-group">
+                                <input type="text" id="edit-title" placeholder="Title">
+
+                                <div class="field-div">
+                                    <label for="survey_run_time">Run time</label>
+                                    <input type="time" name="survey[run_time]" id="survey_run_time" class="w-auto">
+                                </div>
+
+                                <div class="field-div">
+                                    <label for="survey_report_time">Report time</label>
+                                    <input type="time" name="survey[report_time]" id="survey_report_time"
+                                           class="w-auto">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <div class="field-div half">
+                                    <label for="expected_response">EXPECTED RESPONSE</label>
+                                    <textarea id="expected_response"></textarea>
+                                </div>
+
+                                <label class="dark-theme container-checkbox field">
+                                    <input type="checkbox">
+                                    ACTIVE
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="dark-theme container-checkbox field">
+                                    <input type="checkbox">
+                                    REPEAT ON WEEKENDS
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                            <div class="field-group">
+                                <div class="field-div half">
+                                    <label for="unexpected_response">UNEXPECTED RESPONSE</label>
+                                    <textarea id="unexpected_response"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="question-group">
+                                <input class="btn-add-question btn btn-blue" type="button" value="+ ADD QUESTION">
+
+                                <div class="question-fields field-group half">
+                                    <input type="text" id="add-question" placeholder="Question">
+                                    <input type="text" id="expected-response" placeholder="Expected response">
+                                    <input class="btn-remove btn btn-blue w-auto" type="button" value="- REMOVE">
+                                </div>
+                            </div>
+
+
+
+                                <input class="btn btn-blue btn-wide" type="submit" value="SUBMIT">
+
+
+                        </form>
+
+                    </section>
+
+                </div>
+                <div class="info-footer dark-theme">
+                    <div class="content-container">
+                        <div class="information-block">
+                            <span class="copyright">Copyright 2020</span>
+                            <a href="#">Privacy</a>
+                            <a href="#">Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/vendor/calendar.js"></script>
+</footer>
+</body>
+</html>
