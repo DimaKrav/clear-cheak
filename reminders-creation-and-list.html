@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whittier Trust Guest Portal</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="assets/css/calendar.css"/>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="l-side">
+        <div class="site-logo"><img src="assets/img/logo.png" alt="Logo"></div>
+    </div>
+    <div class="r-side">
+        <div class="login-wrap">
+            <a href="#sign-out">Sign Out</a><span> | Welcome Back,</span> <span class="avatar-name">Julie!</span>
+            <a href="#avatar"><img src="assets/img/avatar-cut.jpg" alt="Avatar"></a>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+    <div class="container-fluid">
+        <div class="row d-flex">
+
+            <div id="sidebar" class="col-md-2 sidebar-panel">
+
+                <ul id="menu" class="menu">
+                    <li class="item active"><a class="item-link current" href="#visitors">VISITORS</a></li>
+                </ul>
+
+                <ul class="additional-menu">
+                    <li><a class="additional-link" href="#sign-out">Sign out</a></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="wrap-inner">
+                <div id="message"></div>
+
+                <div class="col-md-10 content">
+
+                    <section class="content-container white-section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1 class="page-title">Whittier Trust<span class="light dark-theme"> Guest Portal</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-container suvery-section">
+
+                        <input class="btn btn-blue" type="button" value="+ ADD A REMINDER">
+
+                        <form class="reminders-form">
+                            <div class="field-group">
+
+                                <div class="field-div half">
+                                    <label for="body_reminder">BODY</label>
+                                    <textarea id="body_reminder"></textarea>
+                                </div>
+
+
+                            </div>
+
+                            <div class="field-group">
+                                <div class="field-div">
+                                    <label for="survey_run_time">Run time</label>
+                                    <input type="time" name="survey[run_time]" id="survey_run_time" class="w-auto">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+
+                                <label class="dark-theme container-checkbox field">
+                                    <input type="checkbox">
+                                    ACTIVE
+                                    <span class="checkmark"></span>
+                                </label>
+
+                            </div>
+
+                            <div class="field-group">
+
+                                <label class="dark-theme container-checkbox field">
+                                    <input type="checkbox">
+                                    REPEAT ON WEEKENDS
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                            <input class="btn btn-blue btn-wide" type="submit" value="SAVE">
+                        </form>
+
+                    </section>
+
+                    <section class="content-container visitor-log">
+                        <p class="tible-title">Reminder list</p>
+                        <div class="info-table">
+                            <div class="table-responsive">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Body</th>
+                                        <th>RUN TIME</th>
+                                        <th>ACTIVE</th>
+                                        <th>REPEAT ON WEEKENDS</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tr>
+                                        <td data-label="Body" class="bold">WHITTIER  Covid-19: keep...
+                                        </td>
+                                        <td data-label="Run Time">12.12 AM</td>
+                                        <td data-label="Active"><a href="#action"><img src="assets/img/check-red.png" alt="check red"></a></td>
+                                        <td data-label="Repeat on weekends"><a href="#action"><img src="assets/img/check-red.png" alt="check red"></a></td>
+                                        <td><a href="#remove"><span class="remove"></span></a></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Body" class="bold">WHITTIER  Covid-19: keep...
+                                            WHITTIER  Covid-19: keep...
+                                        </td>
+                                        <td data-label="Run Time">12.12 AM</td>
+                                        <td data-label="Active"><a href="#action"><img src="assets/img/check-red.png" alt="check red"></a></td>
+                                        <td data-label="Repeat on weekends"><a href="#action"><img src="assets/img/check-red.png" alt="check red"></a></td>
+                                        <td><a href="#remove"><span class="remove"></span></a></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="info-footer dark-theme">
+                    <div class="content-container">
+                        <div class="information-block">
+                            <span class="copyright">Copyright 2020</span>
+                            <a href="#">Privacy</a>
+                            <a href="#">Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/vendor/calendar.js"></script>
+</footer>
+</body>
+</html>
