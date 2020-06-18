@@ -217,6 +217,10 @@ input[type=search] {
   }
 }
 
+.small-table {
+  max-width: 800px;
+}
+
 .info-table-search {
   display: flex;
   flex-wrap: wrap;
@@ -393,6 +397,19 @@ span.remove {
     &:before, &:after {
       background: $blue-light;
     }
+  }
+}
+
+span.edit {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: $blue-dark;
+  transition: .3s;
+
+  &:hover {
+    filter: brightness(1.7);
   }
 }
 
